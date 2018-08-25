@@ -1,0 +1,8 @@
+[submodule "themes/jane"]
+	path = themes/jane
+	url = https://github.com/xianmin/hugo-theme-jane.git
+	branch = master
+[submodule "themes/hugo-pacman-theme"]
+	path = themes/hugo-pacman-theme
+	url = https://github.com/coderzh/hugo-pacman-theme.git
+	branch = master
