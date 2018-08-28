@@ -6,3 +6,7 @@
 	path = themes/hugo-pacman-theme
 	url = https://github.com/coderzh/hugo-pacman-theme.git
 	branch = master
+[submodule "public"]
+	path = public
+	url = git@github.com:ElvisSong/elvissong.github.io.git
+	branch = master

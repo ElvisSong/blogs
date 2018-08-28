@@ -1,4 +1,4 @@
-BaseURL = "http://elvissong.github.io/"
+BaseURL = "https://elvissong.github.io/"
 LanguageCode = "zh-CN"
 HasCJKLanguage = true
 Title = "金窝银窝，不如狗窝"
@@ -24,7 +24,7 @@ pygmentsUseClasses = true
     baseName = "feed"
 
 [Params]
-  AuthorHomepage = "http://elvissong.github.com"
+  AuthorHomepage = "https://elvissong.github.com"
   BottomIntroduce = "一个半路出家的测试程序员 <br/> 想要做点想做的东西"
   Description = "Welcome to my blog! <br/> Hope you have fun here!"
   Subtitle = ""

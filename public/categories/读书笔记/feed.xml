@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>读书笔记 on 金窝银窝，不如狗窝</title>
+    <link>http://elvissong.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 读书笔记 on 金窝银窝，不如狗窝</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 21 Aug 2018 23:48:57 +0800</lastBuildDate>
+    
+	<atom:link href="http://elvissong.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hello,hugo</title>
+      <link>http://elvissong.github.io/post/hellohugo/</link>
+      <pubDate>Tue, 21 Aug 2018 23:48:57 +0800</pubDate>
+      
+      <guid>http://elvissong.github.io/post/hellohugo/</guid>
+      <description>你好，Hugo! 这是第一篇用 Hugo 来创建的文章，开始替换 Hexo。为什么不用 Hexo 了呢，大概还是觉得 node.js 有点繁琐吧。其实大部分原因是我对 Go 产生了兴趣，</description>
+    </item>
+    
+  </channel>
+</rss>
