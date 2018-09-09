@@ -3,39 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://elvissong.github.io/post/hellohugo/</loc>
+    <loc>https://elvissong.github.io/post/hellohugo/</loc>
     <lastmod>2018-08-21T23:48:57+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://elvissong.github.io/about/</loc>
+    <loc>https://elvissong.github.io/about/</loc>
     <lastmod>2016-03-20T23:28:02+08:00</lastmod>
   </url>
   
   <url>
-    <loc>http://elvissong.github.io/categories/</loc>
+    <loc>https://elvissong.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://elvissong.github.io/post/</loc>
+    <loc>https://elvissong.github.io/post/</loc>
     <lastmod>2018-08-21T23:48:57+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://elvissong.github.io/tags/</loc>
+    <loc>https://elvissong.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://elvissong.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://elvissong.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2018-08-21T23:48:57+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://elvissong.github.io/feed.xml</loc>
+    <loc>https://elvissong.github.io/feed.xml</loc>
     <lastmod>2018-08-21T23:48:57+08:00</lastmod>
     <priority>0</priority>
   </url>
