@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lives on 金窝银窝，不如狗窝</title>
+    <link>https://elvissong.github.io/life/</link>
+    <description>Recent content in Lives on 金窝银窝，不如狗窝</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 10 Jun 2018 23:59:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://elvissong.github.io/life/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>你好，杭州</title>
+      <link>https://elvissong.github.io/life/%E4%BD%A0%E5%A5%BD%E6%9D%AD%E5%B7%9E/</link>
+      <pubDate>Sun, 10 Jun 2018 23:59:44 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/life/%E4%BD%A0%E5%A5%BD%E6%9D%AD%E5%B7%9E/</guid>
+      <description>五年前高考结束，暑假的时间来杭州转了一天。依稀记得当时和姑姑，堂弟一起，观山，入寺，赏湖。一天下来可是真累。 自己却从未想过会到杭州来工作，感</description>
+    </item>
+    
+    <item>
+      <title>我的2017</title>
+      <link>https://elvissong.github.io/life/%E6%88%91%E7%9A%842017/</link>
+      <pubDate>Sun, 31 Dec 2017 14:00:00 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/life/%E6%88%91%E7%9A%842017/</guid>
+      <description>2017的最后一天，是在公司值班度过的。上午还做了几个单子。下午倒没啥事情。 2017年六月，从学校毕业了，从一个学生狗到一个社畜，只需要短短</description>
+    </item>
+    
+    <item>
+      <title>Merry Christmas</title>
+      <link>https://elvissong.github.io/life/merry-christmas/</link>
+      <pubDate>Mon, 25 Dec 2017 14:49:51 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/life/merry-christmas/</guid>
+      <description>写在圣诞节前夜的一些话，随便看看就好了。 Merry Christmas 唔，今年圣诞的感觉好像特别强烈，大概是因为这是毕业后的第一个圣诞节吧。之前在学校的时候总是和宿舍</description>
+    </item>
+    
+  </channel>
+</rss>

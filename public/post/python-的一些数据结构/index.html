@@ -2,13 +2,13 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Hello,hugo - 金窝银窝，不如狗窝</title>
+  <title>Python 的一些数据结构 - 金窝银窝，不如狗窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
   
-  <meta name="description" content="你好，Hugo! 这是第一篇用 Hugo 来创建的文章，开始替换 Hexo。为什么不用 Hexo 了呢，大概还是觉得 node.js 有点繁琐吧。其实大部分原因是我对 Go 产生了兴趣，">
+  <meta name="description" content="Python 的一些数据结构 列表 列表的一些内置函数 list.append(x) 把一个元素添加到列表的结尾，相当于 a[len(a):] = [x]。 list.extend(L) 将一个给定列表中的所有元素都添加到另一个列表中，相当">
   
-  <meta itemprop="name" content="Hello,hugo - 金窝银窝，不如狗窝">
-  <meta itemprop="description" content="你好，Hugo! 这是第一篇用 Hugo 来创建的文章，开始替换 Hexo。为什么不用 Hexo 了呢，大概还是觉得 node.js 有点繁琐吧。其实大部分原因是我对 Go 产生了兴趣，">
+  <meta itemprop="name" content="Python 的一些数据结构 - 金窝银窝，不如狗窝">
+  <meta itemprop="description" content="Python 的一些数据结构 列表 列表的一些内置函数 list.append(x) 把一个元素添加到列表的结尾，相当于 a[len(a):] = [x]。 list.extend(L) 将一个给定列表中的所有元素都添加到另一个列表中，相当">
   <meta itemprop="image" content="https://elvissong.github.io/img/author.jpg">
   
   
@@ -63,7 +63,7 @@
 	<article itemprop="articleBody">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-      <a href="https://elvissong.github.io/post/hellohugo/" title="Hello,hugo" itemprop="url">Hello,hugo</a>
+      <a href="https://elvissong.github.io/post/python-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="Python 的一些数据结构" itemprop="url">Python 的一些数据结构</a>
   </h1>
   <p class="article-author">By
     
@@ -71,7 +71,7 @@
     
   </p>
   <p class="article-time">
-    <time datetime="2018-08-21 23:48:57 &#43;0800 CST" itemprop="datePublished">2018年08月21日</time>
+    <time datetime="2017-01-01 23:48:57 &#43;0800 CST" itemprop="datePublished">2017年01月01日</time>
   </p>
 </header>
 
@@ -85,7 +85,17 @@
 <ul>
 <li>
 <ul>
-<li><a href="#你好-hugo">你好，Hugo!</a></li>
+<li><a href="#python-的一些数据结构">Python 的一些数据结构</a></li>
+<li><a href="#列表">列表</a>
+<ul>
+<li><a href="#列表的一些内置函数">列表的一些内置函数</a></li>
+<li><a href="#把列表当作堆栈">把列表当作堆栈</a></li>
+<li><a href="#把列表当作队列">把列表当作队列</a></li>
+</ul></li>
+<li><a href="#del-语句">del 语句</a></li>
+<li><a href="#元组">元组</a></li>
+<li><a href="#集合">集合</a></li>
+<li><a href="#字典">字典</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -94,11 +104,184 @@
     
     
 
-<h3 id="你好-hugo">你好，Hugo!</h3>
+<h3 id="python-的一些数据结构">Python 的一些数据结构</h3>
 
-<p>这是第一篇用 Hugo 来创建的文章，开始替换 Hexo。为什么不用 Hexo 了呢，大概还是觉得 node.js 有点繁琐吧。其实大部分原因是我对 Go 产生了兴趣，正巧 Go 下有个 Hugo 这个静态站点生成器，就顺势换掉了。之前用 Hexo 搭建的博客也没有坚持下去，这个又不知道能坚持多久了。</p>
+<h3 id="列表">列表</h3>
 
-<p>总之，加油吧。</p>
+<h4 id="列表的一些内置函数">列表的一些内置函数</h4>
+
+<blockquote>
+<p>list.append(x)</p>
+</blockquote>
+
+<p>把一个元素添加到列表的结尾，相当于 a[len(a):] = [x]。</p>
+
+<blockquote>
+<p>list.extend(L)</p>
+</blockquote>
+
+<p>将一个给定列表中的所有元素都添加到另一个列表中，相当于 a[len(a):] = L。</p>
+
+<blockquote>
+<p>list.insert(i, x)</p>
+</blockquote>
+
+<p>在指定位置插入一个元素。第一个参数是准备插入到其前面的那个元素的索引，例如 a.insert(0, x) 会插入到整个列表之前，而 a.insert(len(a), x) 相当于 a.append(x)。</p>
+
+<blockquote>
+<p>list.remove(x)</p>
+</blockquote>
+
+<p>删除列表中值为 x 的第一个元素。如果没有这样的元素，就会返回一个错误。</p>
+
+<blockquote>
+<p>list.pop([i])</p>
+</blockquote>
+
+<p>从列表的指定位置删除元素，并将其返回。如果没有指定索引，a.pop() 返回最后一个元素。元素随即从列表中被删除（方法中 i 两边的方括号表示这个参数是可选的，而不是要求你输入一对方括号，你会经常在Python 库参考手册中遇到这样的标记）。</p>
+
+<blockquote>
+<p>list.clear()</p>
+</blockquote>
+
+<p>从列表中删除所有元素。相当于 del a[:]。</p>
+
+<blockquote>
+<p>list.index(x)</p>
+</blockquote>
+
+<p>返回列表中第一个值为 x 的元素的索引。如果没有匹配的元素就会返回一个错误。</p>
+
+<blockquote>
+<p>list.count(x)</p>
+</blockquote>
+
+<p>返回 x 在列表中出现的次数。</p>
+
+<blockquote>
+<p>list.sort()</p>
+</blockquote>
+
+<p>对列表中的元素就地进行排序。</p>
+
+<blockquote>
+<p>list.reverse()</p>
+</blockquote>
+
+<p>就地倒排列表中的元素。</p>
+
+<blockquote>
+<p>list.copy()</p>
+</blockquote>
+
+<p>返回列表的一个浅拷贝。等同于 a[:]。</p>
+
+<h4 id="把列表当作堆栈">把列表当作堆栈</h4>
+
+<p>列表方法使得列表可以很方便的做为一个堆栈来使用，堆栈作为特定的数据结构，最先进入的元素最后一个被释放（后进先出）。用 append() 方法可以把一个元素添加到堆栈顶。用不指定索引的 pop() 方法可以把一个元素从堆栈顶释放出来。</p>
+
+<h4 id="把列表当作队列">把列表当作队列</h4>
+
+<p>你也可以把列表当做队列使用，队列作为特定的数据结构，最先进入的元素最先释放（先进先出）。不过，列表这样用效率不高。相对来说从列表末尾添加和弹出很快；在头部插入和弹出很慢（因为，为了一个元素，要移动整个列表中的所有元素）。</p>
+
+<p>要实现队列，使用 collections.deque，它为在首尾两端快速插入和删除而设计。</p>
+
+<pre><code>In [30]: from collections import deque
+
+In [31]: queue = deque([&quot;Eric&quot;, &quot;John&quot;, &quot;Michael&quot;])
+
+In [32]: queue.append(&quot;Terry&quot;)
+
+In [33]: queue
+Out[33]: deque(['Eric', 'John', 'Michael', 'Terry'])
+
+In [34]: queue.appendleft(&quot;Song&quot;)
+
+In [35]: queue
+Out[35]: deque(['Song', 'Eric', 'John', 'Michael', 'Terry'])
+
+In [36]: queue.pop()
+Out[36]: 'Terry'
+
+In [37]: queue.popleft()
+Out[37]: 'Song'
+
+In [38]: queue
+Out[38]: deque(['Eric', 'John', 'Michael'])
+
+</code></pre>
+
+<h3 id="del-语句">del 语句</h3>
+
+<p>有个方法可以从列表中按给定的索引而不是值来删除一个子项： del 语句。它不同于有返回值的 pop() 方法。语句 del 还可以从列表中删除切片或清空整个列表。</p>
+
+<pre><code>In [39]:  a = [-1, 1, 66.25, 333, 333, 1234.5]
+
+In [40]: del a[0]
+
+In [41]: a
+Out[41]: [1, 66.25, 333, 333, 1234.5]
+
+In [42]: del a[3:4]
+
+In [43]: a
+Out[43]: [1, 66.25, 333, 1234.5]
+
+In [44]: del a[:]
+
+In [45]: a
+Out[45]: []
+
+</code></pre>
+
+<p>del 也可以用来删除变量，但是之后的引用就会报错，除非重新赋值。</p>
+
+<h3 id="元组">元组</h3>
+
+<p>元组在输出时总是有括号的，以便于正确表达嵌套结构。在输入时可以有或没有括号，不过经常括号都是必须的（如果元组是一个更大的表达式的一部分）。不能给元组的一个独立的元素赋值（尽管你可以通过联接和切割来模拟）。还可以创建包含可变对象的元组，例如列表。</p>
+
+<p>虽然元组和列表很类似，它们经常被用来在不同的情况和不同的用途。元组有很多用途。例如 (x, y) 坐标对，数据库中的员工记录等等。元组就像字符串， 不可变的。通常包含不同种类的元素并通过分拆（参阅本节后面的内容) 或索引访问（如果是 namedtuples，甚至可以通过属性）。列表是 可变的 ，它们的元素通常是相同类型的并通过迭代访问。</p>
+
+<p>一个特殊的问题是构造包含零个或一个元素的元组：为了适应这种情况，语法上有一些额外的改变。一对空的括号可以创建空元组；要创建一个单元素元组可以在值后面跟一个逗号（在括号中放入一个单值不够明确）。丑陋，但是有效。</p>
+
+<pre><code>In [53]: t = 'hello', 'world', '!'
+
+In [54]: t[0]
+Out[54]: 'hello'
+
+In [55]: t
+Out[55]: ('hello', 'world', '!')
+
+In [56]: u = t, ('hello', 'python', '!')
+
+In [57]: u
+Out[57]: (('hello', 'world', '!'), ('hello', 'python', '!'))
+
+In [58]: t[1] = 1
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+&lt;ipython-input-58-d6b0ce29b2aa&gt; in &lt;module&gt;()
+----&gt; 1 t[1] = 1
+
+TypeError: 'tuple' object does not support item assignment
+
+</code></pre>
+
+<h3 id="集合">集合</h3>
+
+<p>集合是一个无序不重复元素的集。基本功能包括关系测试和消除重复元素。集合对象还支持 union（联合），intersection（交），difference（差）和 sysmmetric difference（对称差集）等数学运算。</p>
+
+<p>大括号或 set() 函数可以用来创建集合。注意：想要创建空集合，你必须使用 set() 而不是 {}。</p>
+
+<h3 id="字典">字典</h3>
+
+<p>字典在某些语言中可能称为 联合内存 （ associative memories ）或 联合数组 （ associative arrays ）。序列是以连续的整数为索引，与此不同的是，字典以 关键字 为索引，关键字可以是任意不可变类型，通常用字符串或数值。如果元组中只包含字符串和数字，它可以做为关键字，如果它直接或间接的包含了可变对象，就不能当做关键字。不能用列表做关键字，因为列表可以用索引、切割或者 append() 和 extend() 等方法改变。</p>
+
+<p>理解字典的最佳方式是把它看做无序的键： 值对 （key:value 对）集合，键必须是互不相同的（在同一个字典之内）。一对大括号创建一个空的字典： {} 。初始化列表时，在大括号内放置一组逗号分隔的键：值对，这也是字典输出的方式。</p>
+
+<p>字典的主要操作是依据键来存储和析取值。也可以用 del 来删除键：值对（key:value）。如果你用一个已经存在的关键字存储值，以前为该关键字分配的值就会被遗忘。试图从一个不存在的键中取值会导致错误。</p>
+
+<p>对一个字典执行 list(d.keys()) 将返回一个字典中所有关键字组成的无序列表（如果你想要排序，只需使用 sorted(d.keys()) ）。使用 in 关键字（指Python语法）可以检查字典中是否存在某个关键字（指字典）。</p>
 
 	</div>
   <footer class="article-footer clearfix">
@@ -116,7 +299,7 @@
 
 
   <div class="article-share" id="share">
-    <div data-url="https://elvissong.github.io/post/hellohugo/" data-title="Hello,hugo" data-tsina="2557765741" class="share clearfix">
+    <div data-url="https://elvissong.github.io/post/python-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" data-title="Python 的一些数据结构" data-tsina="2557765741" class="share clearfix">
     </div>
   </div>
 </footer>

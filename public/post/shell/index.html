@@ -2,13 +2,13 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>Hello,hugo - 金窝银窝，不如狗窝</title>
+  <title>Shell 基础 - 金窝银窝，不如狗窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
   
-  <meta name="description" content="你好，Hugo! 这是第一篇用 Hugo 来创建的文章，开始替换 Hexo。为什么不用 Hexo 了呢，大概还是觉得 node.js 有点繁琐吧。其实大部分原因是我对 Go 产生了兴趣，">
+  <meta name="description" content="Shell是什么 Shell 是一个命令行解释器，它为用户提供了一个向 Linux 内核发送请求以便运行程序的界面系统级程序。 Shell 还是一个弓能强大的编程语言，易编写，">
   
-  <meta itemprop="name" content="Hello,hugo - 金窝银窝，不如狗窝">
-  <meta itemprop="description" content="你好，Hugo! 这是第一篇用 Hugo 来创建的文章，开始替换 Hexo。为什么不用 Hexo 了呢，大概还是觉得 node.js 有点繁琐吧。其实大部分原因是我对 Go 产生了兴趣，">
+  <meta itemprop="name" content="Shell 基础 - 金窝银窝，不如狗窝">
+  <meta itemprop="description" content="Shell是什么 Shell 是一个命令行解释器，它为用户提供了一个向 Linux 内核发送请求以便运行程序的界面系统级程序。 Shell 还是一个弓能强大的编程语言，易编写，">
   <meta itemprop="image" content="https://elvissong.github.io/img/author.jpg">
   
   
@@ -63,7 +63,7 @@
 	<article itemprop="articleBody">
     <header class="article-info clearfix">
   <h1 itemprop="name">
-      <a href="https://elvissong.github.io/post/hellohugo/" title="Hello,hugo" itemprop="url">Hello,hugo</a>
+      <a href="https://elvissong.github.io/post/shell/" title="Shell 基础" itemprop="url">Shell 基础</a>
   </h1>
   <p class="article-author">By
     
@@ -71,7 +71,7 @@
     
   </p>
   <p class="article-time">
-    <time datetime="2018-08-21 23:48:57 &#43;0800 CST" itemprop="datePublished">2018年08月21日</time>
+    <time datetime="2017-02-01 00:00:00 &#43;0800 CST" itemprop="datePublished">2017年02月01日</time>
   </p>
 </header>
 
@@ -85,7 +85,18 @@
 <ul>
 <li>
 <ul>
-<li><a href="#你好-hugo">你好，Hugo!</a></li>
+<li><a href="#shell是什么">Shell是什么</a></li>
+<li><a href="#一些命令">一些命令</a></li>
+<li><a href="#bash-的基本功能">Bash 的基本功能</a>
+<ul>
+<li><a href="#命令别名和快捷键">命令别名和快捷键</a></li>
+<li><a href="#命令生效顺序">命令生效顺序</a></li>
+<li><a href="#常用快捷键">常用快捷键</a></li>
+<li><a href="#历史命令">历史命令</a></li>
+<li><a href="#输出重定向">输出重定向</a></li>
+<li><a href="#多命令顺序执行">多命令顺序执行</a></li>
+<li><a href="#shell-中特殊符号">Shell 中特殊符号</a></li>
+</ul></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -94,11 +105,286 @@
     
     
 
-<h3 id="你好-hugo">你好，Hugo!</h3>
+<h3 id="shell是什么">Shell是什么</h3>
 
-<p>这是第一篇用 Hugo 来创建的文章，开始替换 Hexo。为什么不用 Hexo 了呢，大概还是觉得 node.js 有点繁琐吧。其实大部分原因是我对 Go 产生了兴趣，正巧 Go 下有个 Hugo 这个静态站点生成器，就顺势换掉了。之前用 Hexo 搭建的博客也没有坚持下去，这个又不知道能坚持多久了。</p>
+<p>Shell 是一个命令行解释器，它为用户提供了一个向 Linux 内核发送请求以便运行程序的界面系统级程序。<br />
+Shell 还是一个弓能强大的编程语言，易编写，易调试，灵活性较强。Shell 是解释执行的的脚本语言，在 Shell 中可以直接调用 Linux 系统命令。</p>
 
-<p>总之，加油吧。</p>
+<h3 id="一些命令">一些命令</h3>
+
+<ol>
+<li>echo 输出命令<br /></li>
+<li>echo [选项] [输出内容]<br /></li>
+<li>选项：-e: 支持反斜线控制字符转换<br />
+<br /></li>
+</ol>
+
+<p>控制字符 | 作用 |<br />
+&ndash; | &ndash;<br />
+\a | 输出警告声<br />
+\b | 退格键，也就是向左删除键<br />
+\n | 换行符<br />
+\r | 回车键<br />
+\t | 制表符，也就是 tab 键<br />
+\v | 垂直制表符<br />
+\0nnn | 按照八进制 ASCII 码表输出字符。0 是数字零，nnn 是三位八进制数<br />
+\xhh | 按照十六进制 ASCII 码表输出字符。</p>
+
+<ol>
+<li>脚本执行<br /></li>
+<li>赋予执行权限，直接运行<br />
+&gt; chmod 755 hello.sh<br />
+<br /></li>
+</ol>
+
+<blockquote>
+<p>./hello.sh</p>
+</blockquote>
+
+<ul>
+<li>通过 Bash 调用脚本<br />
+&gt; bash hello.sh<br />
+<br /></li>
+</ul>
+
+<h3 id="bash-的基本功能">Bash 的基本功能</h3>
+
+<h4 id="命令别名和快捷键">命令别名和快捷键</h4>
+
+<ul>
+<li>查看系统中所有命令的别名<br />
+&gt; alias<br /></li>
+<li>设定别名命令<br />
+&gt; alias 别名=‘原命令’<br /></li>
+<li>别名永久生效，需写入环境变量配置文件<br />
+&gt; vi ~/.bashrc<br /></li>
+<li>删除别名<br />
+&gt; unalias<br />
+<br /></li>
+</ul>
+
+<h4 id="命令生效顺序">命令生效顺序</h4>
+
+<ol>
+<li>第一顺位执行用绝对路径或相对路径执行的命令<br /></li>
+<li>第二顺位执行命令<br /></li>
+<li>第三顺位执行 Bash 的内部命令<br /></li>
+<li>第四顺位执行按照 $PATH 环境变量定义的目录查找顺序找到的第一个命令<br />
+<br /></li>
+</ol>
+
+<h4 id="常用快捷键">常用快捷键</h4>
+
+<ol>
+<li>Ctrl + c : 强制终止当前命令<br /></li>
+<li>Ctrl + l : 清屏<br /></li>
+<li>Ctrl + a : 光标移动到命令行首<br /></li>
+<li>Ctrl + e : 光标移动到命令行尾<br /></li>
+<li>Ctrl + u ：从光标所在位置删除到行首<br /></li>
+<li>Ctrl + z : 把命令放入后台<br /></li>
+<li>Ctrl + r : 在历史命令中搜索<br />
+<br /></li>
+</ol>
+
+<h4 id="历史命令">历史命令</h4>
+
+<ul>
+<li>查看历史命令<br />
+&gt; history [选项] [历史命令保存文件]<br />
+<br /></li>
+</ul>
+
+<blockquote>
+<p>-c: 清空历史命令</p>
+
+<p>-w：把缓存中的历史命令写入历史命令保存文件 ~/.bash_history</p>
+</blockquote>
+
+<ul>
+<li>历史命令的调用<br /></li>
+<li>使用上下箭头调用之前的命令<br /></li>
+<li>使用 “!n” 重复执行第 n 条历史命令<br /></li>
+<li>使用 “!!” 重复执行上一条命令<br /></li>
+<li>使用 “!字串” 重复执行最后一条以该字串开头的命令<br />
+<br />
+<br /></li>
+</ul>
+
+<h4 id="输出重定向">输出重定向</h4>
+
+<ul>
+<li>输出重定向<br />
+<br /></li>
+</ul>
+
+<table>
+   <tr>
+      <td>类型</td>
+      <td>符号</td>
+      <td>作用</td>
+   </tr>
+   <tr>
+      <td rowspan="2">标准输出重定向</td>
+      <td>命令 > 文件</td>
+      <td>以覆盖的方式，把命令的正确输出输出到指定的文件或设备当中。</td>
+   </tr>
+   <tr>
+      <td>命令 >> 文件</td>
+      <td>以追加的方式，把命令的正确输出输出到指定的文件或设备当中。</td>
+   </tr>
+   <tr>
+      <td rowspan="2">标准错误输出重定向</td>
+      <td>错误命令 2> 文件</td>
+      <td>以覆盖的方式，把命令的错误输出输出到指定的文件或设备当中。</td>
+   </tr>
+   <tr>
+      <td>错误命令 2>> 文件</td>
+      <td>以追加的方式，把命令的错误输出输出到指定的文件或设备当中。</td>
+   </tr>
+   <tr>
+      <td rowspan="5">正确输出和错误输出同时保存</td>
+      <td>命令 > 文件 2>&1</td>
+      <td>以覆盖的方式，把正确输出和错误输出输出保存到同一文件当中。</td>
+   </tr>
+   <tr>
+      <td>命令 >> 文件 2>&1</td>
+      <td>以追加的方式，把正确输出和错误输出输出保存到同一文件当中。</td>
+   </tr>
+   <tr>
+      <td>命令 &> 文件</td>
+      <td>以覆盖的方式，把正确输出和错误输出输出保存到同一文件当中。</td>
+   </tr>
+   <tr>
+      <td>命令 &>> 文件</td>
+      <td>以追加的方式，把正确输出和错误输出输出保存到同一文件当中。</td>
+   </tr>
+   <tr>
+      <td>命令 >> 文件1 2>> 文件2</td>
+      <td>把正确的输出追加到文件1，把错误的输出追加到文件2中。</td>
+   </tr>
+</table>
+
+<ul>
+<li>输入重定向<br />
+&gt; wc [选项][文件名]<br />
+<br /></li>
+</ul>
+
+<blockquote>
+<p>选项：</p>
+
+<p>-c: 统计字节数<br />
+-w: 统计单词数<br />
+-l：统计行数</p>
+</blockquote>
+
+<h4 id="多命令顺序执行">多命令顺序执行</h4>
+
+<ul>
+<li><p>多命令执行符<br />
+多命令执行符 | 格式 | 作用<br />
+&ndash; | &ndash; | &ndash;<br />
+; | 命令1;命令2 | 多个命令顺序执行，命令之间没有任何逻辑关系<br />
+&amp;&amp; | 命令1&amp;&amp;命令2 | 逻辑与, 当命令1正确执行，则命令2才会执行；当命令1执行不正确，则命令2不会执行<br />
+|| | 命令1||命令2 | 逻辑或，当命令1执行不正确，则命令2才会执行；当命令1正确执行，命令2不会执行</p></li>
+
+<li><p>管道符</p></li>
+</ul>
+
+<p>命令1正确输出作为命令2的操作对象</p>
+
+<blockquote>
+<p>命令1 | 命令2</p>
+</blockquote>
+
+<h4 id="shell-中特殊符号">Shell 中特殊符号</h4>
+
+<ul>
+<li>通配符<br />
+<br /></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>通配符</th>
+<th>作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>?</td>
+<td>匹配一个任意字符</td>
+</tr>
+
+<tr>
+<td>*</td>
+<td>匹配0个或任意多个任意字符，也就是匹配任何内容</td>
+</tr>
+
+<tr>
+<td>[]</td>
+<td>匹配括号中任意一个字符串。如：[abc]代表一定匹配一个字符，或者a,或者b,或者c.</td>
+</tr>
+
+<tr>
+<td>[-]</td>
+<td>匹配括号中任意一个字符，-代表一个范围。[a-z]代表匹配一个小写字母</td>
+</tr>
+
+<tr>
+<td>[^]</td>
+<td>逻辑非，表示匹配不是括号内的一个字符。[^0-9]表示匹配一个不是数字的字符</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li>Bash 中其他特殊符号<br />
+<br /></li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>作用</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>‘’</td>
+<td>单引号。在单引号中所有的特殊符号，如 ‘$’ 和 ‘`’ 都没有特殊含义。</td>
+</tr>
+
+<tr>
+<td>“”</td>
+<td>双引号。在双引号中特殊字符都没有特殊含义，但是 “$”、“`”和“\”是例外，拥有“调用变量的值”，“引用命令”和“转义符”的特殊含义。</td>
+</tr>
+
+<tr>
+<td>``</td>
+<td>反引号。 反引号括起来的是系统命令，在 Bash 中会先执行它。和$()作用一样，推荐使用$()，反引号容易看错。</td>
+</tr>
+
+<tr>
+<td>#</td>
+<td>在 Shell 脚本中， #开头的行代表注释。</td>
+</tr>
+
+<tr>
+<td>$</td>
+<td>用于调用变量的值，如需要调用变量 name 的值时，使用 $name。</td>
+</tr>
+
+<tr>
+<td></td>
+<td>转义符，跟在 \ 后的特殊符号失去特殊含义，变为普通字符。</td>
+</tr>
+</tbody>
+</table>
 
 	</div>
   <footer class="article-footer clearfix">
@@ -116,7 +402,7 @@
 
 
   <div class="article-share" id="share">
-    <div data-url="https://elvissong.github.io/post/hellohugo/" data-title="Hello,hugo" data-tsina="2557765741" class="share clearfix">
+    <div data-url="https://elvissong.github.io/post/shell/" data-title="Shell 基础" data-tsina="2557765741" class="share clearfix">
     </div>
   </div>
 </footer>

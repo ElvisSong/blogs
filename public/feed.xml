@@ -23,10 +23,82 @@
     <item>
       <title>about</title>
       <link>https://elvissong.github.io/about/</link>
-      <pubDate>Sun, 20 Mar 2016 23:28:02 +0800</pubDate>
+      <pubDate>Mon, 20 Aug 2018 23:28:02 +0800</pubDate>
       
       <guid>https://elvissong.github.io/about/</guid>
-      <description>关于 Hugo 主题 balabalbalbalbal&amp;hellip;</description>
+      <description>关于 关于我 这里是平行线上的博客，依托于 Github 。是个程序测试员，水分特别大。目前在杭州工作。平时会看一些漫画，和比较有兴趣的动画（动漫婆罗门？）。</description>
+    </item>
+    
+    <item>
+      <title>你好，杭州</title>
+      <link>https://elvissong.github.io/life/%E4%BD%A0%E5%A5%BD%E6%9D%AD%E5%B7%9E/</link>
+      <pubDate>Sun, 10 Jun 2018 23:59:44 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/life/%E4%BD%A0%E5%A5%BD%E6%9D%AD%E5%B7%9E/</guid>
+      <description>五年前高考结束，暑假的时间来杭州转了一天。依稀记得当时和姑姑，堂弟一起，观山，入寺，赏湖。一天下来可是真累。 自己却从未想过会到杭州来工作，感</description>
+    </item>
+    
+    <item>
+      <title>我的2017</title>
+      <link>https://elvissong.github.io/life/%E6%88%91%E7%9A%842017/</link>
+      <pubDate>Sun, 31 Dec 2017 14:00:00 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/life/%E6%88%91%E7%9A%842017/</guid>
+      <description>2017的最后一天，是在公司值班度过的。上午还做了几个单子。下午倒没啥事情。 2017年六月，从学校毕业了，从一个学生狗到一个社畜，只需要短短</description>
+    </item>
+    
+    <item>
+      <title>Merry Christmas</title>
+      <link>https://elvissong.github.io/life/merry-christmas/</link>
+      <pubDate>Mon, 25 Dec 2017 14:49:51 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/life/merry-christmas/</guid>
+      <description>写在圣诞节前夜的一些话，随便看看就好了。 Merry Christmas 唔，今年圣诞的感觉好像特别强烈，大概是因为这是毕业后的第一个圣诞节吧。之前在学校的时候总是和宿舍</description>
+    </item>
+    
+    <item>
+      <title>进程管理</title>
+      <link>https://elvissong.github.io/post/linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/post/linux-%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/</guid>
+      <description>进程管理 进程管理的作用 判断服务器健康状态 . 查看系统中 所有进程 杀死进程 查看所有进程 ps aux (BSD 操作系统格式) ps -le (Linux 标准命令格式 ) -a 显示一个终端的所有</description>
+    </item>
+    
+    <item>
+      <title>名词整理</title>
+      <link>https://elvissong.github.io/post/%E5%90%8D%E8%AF%8D%E6%95%B4%E7%90%86/</link>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/post/%E5%90%8D%E8%AF%8D%E6%95%B4%E7%90%86/</guid>
+      <description>Xen:一个开放源代码虚拟机监视器，由XenProject开发。它打算在单个计算机上运行多达128个有完全功能的操作系统。 在旧（无虚拟硬件）</description>
+    </item>
+    
+    <item>
+      <title>SQL语句</title>
+      <link>https://elvissong.github.io/post/sql%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Wed, 01 Mar 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/post/sql%E8%AF%AD%E5%8F%A5/</guid>
+      <description>SQL DML 和 DDL 可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。 SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插</description>
+    </item>
+    
+    <item>
+      <title>Shell 基础</title>
+      <link>https://elvissong.github.io/post/shell/</link>
+      <pubDate>Wed, 01 Feb 2017 00:00:00 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/post/shell/</guid>
+      <description>Shell是什么 Shell 是一个命令行解释器，它为用户提供了一个向 Linux 内核发送请求以便运行程序的界面系统级程序。 Shell 还是一个弓能强大的编程语言，易编写，</description>
+    </item>
+    
+    <item>
+      <title>Python 的一些数据结构</title>
+      <link>https://elvissong.github.io/post/python-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Sun, 01 Jan 2017 23:48:57 +0800</pubDate>
+      
+      <guid>https://elvissong.github.io/post/python-%E7%9A%84%E4%B8%80%E4%BA%9B%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+      <description>Python 的一些数据结构 列表 列表的一些内置函数 list.append(x) 把一个元素添加到列表的结尾，相当于 a[len(a):] = [x]。 list.extend(L) 将一个给定列表中的所有元素都添加到另一个列表中，相当</description>
     </item>
     
   </channel>
