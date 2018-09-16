@@ -112,25 +112,27 @@
 
 
 
-<section class="comment">
-<div id="disqus_thread"></div>
-</section>
-<div id="git-comments"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-  var gitment = new Gitment({
-    id: 'location.href',  
+<div class="post bg-white">
+  <div id="comments-gitment"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script type="text/javascript">
+  const gitment = new Gitment({
+    id: '你好，杭州.md',
+    title: '你好，杭州',
+    link: decodeURI(location.href),
+    desc: '五年前高考结束，暑假的时间来杭州转了一天。依稀记得当时和姑姑，堂弟一起，观山，入寺，赏湖。一天下来可是真累。 自己却从未想过会到杭州来工作，感',
     owner: 'elvissong',
     repo: 'blogs',
     oauth: {
       client_id: '5c7ee7bedb0995204f21',
-      client_secret: '7f4d35180f9069d3eeffab0e16d2bff29e8bbeda',
+      client_secret: '7f4d35180f9069d3eeffab0e16d2bff29e8bbeda'
     }
   })
-  gitment.render('git-comments')
-</script>
-
+  gitment.render('comments-gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+</div>
 
 
 

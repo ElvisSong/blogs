@@ -40,8 +40,11 @@ pygmentsUseClasses = true
   [Params.GoogleAnalytics]
     ID = "UA-10147768-2"
 
-  [Params.Gitment]
-    ShortName = "elvis"
+  [Params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+    owner = "elvissong"              # Your GitHub ID
+    repo = "blogs"               # The repo to store comments
+    clientId = "5c7ee7bedb0995204f21"           # Your client ID
+    clientSecret = "7f4d35180f9069d3eeffab0e16d2bff29e8bbeda"       # Your client secret
 
   [Params.Strings]
     Search = "搜索"

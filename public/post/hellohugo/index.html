@@ -127,25 +127,27 @@
 
 
 
-<section class="comment">
-<div id="disqus_thread"></div>
-</section>
-<div id="git-comments"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-  var gitment = new Gitment({
-    id: 'location.href',  
+<div class="post bg-white">
+  <div id="comments-gitment"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script type="text/javascript">
+  const gitment = new Gitment({
+    id: 'hello,hugo.md',
+    title: 'Hello,hugo',
+    link: decodeURI(location.href),
+    desc: '你好，Hugo! 这是第一篇用 Hugo 来创建的文章，开始替换 Hexo。为什么不用 Hexo 了呢，大概还是觉得 node.js 有点繁琐吧。其实大部分原因是我对 Go 产生了兴趣，',
     owner: 'elvissong',
     repo: 'blogs',
     oauth: {
       client_id: '5c7ee7bedb0995204f21',
-      client_secret: '7f4d35180f9069d3eeffab0e16d2bff29e8bbeda',
+      client_secret: '7f4d35180f9069d3eeffab0e16d2bff29e8bbeda'
     }
   })
-  gitment.render('git-comments')
-</script>
-
+  gitment.render('comments-gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+</div>
 
 
 

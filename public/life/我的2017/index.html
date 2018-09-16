@@ -137,25 +137,27 @@
 
 
 
-<section class="comment">
-<div id="disqus_thread"></div>
-</section>
-<div id="git-comments"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-  var gitment = new Gitment({
-    id: 'location.href',  
+<div class="post bg-white">
+  <div id="comments-gitment"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script type="text/javascript">
+  const gitment = new Gitment({
+    id: '我的2017.md',
+    title: '我的2017',
+    link: decodeURI(location.href),
+    desc: '2017的最后一天，是在公司值班度过的。上午还做了几个单子。下午倒没啥事情。 2017年六月，从学校毕业了，从一个学生狗到一个社畜，只需要短短',
     owner: 'elvissong',
     repo: 'blogs',
     oauth: {
       client_id: '5c7ee7bedb0995204f21',
-      client_secret: '7f4d35180f9069d3eeffab0e16d2bff29e8bbeda',
+      client_secret: '7f4d35180f9069d3eeffab0e16d2bff29e8bbeda'
     }
   })
-  gitment.render('git-comments')
-</script>
-
+  gitment.render('comments-gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+</div>
 
 
 

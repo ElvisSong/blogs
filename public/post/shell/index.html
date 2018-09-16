@@ -413,25 +413,27 @@ Shell 还是一个弓能强大的编程语言，易编写，易调试，灵活�
 
 
 
-<section class="comment">
-<div id="disqus_thread"></div>
-</section>
-<div id="git-comments"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-  var gitment = new Gitment({
-    id: 'location.href',  
+<div class="post bg-white">
+  <div id="comments-gitment"></div>
+  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+  <script type="text/javascript">
+  const gitment = new Gitment({
+    id: 'shell.md',
+    title: 'Shell 基础',
+    link: decodeURI(location.href),
+    desc: 'Shell是什么 Shell 是一个命令行解释器，它为用户提供了一个向 Linux 内核发送请求以便运行程序的界面系统级程序。 Shell 还是一个弓能强大的编程语言，易编写，',
     owner: 'elvissong',
     repo: 'blogs',
     oauth: {
       client_id: '5c7ee7bedb0995204f21',
-      client_secret: '7f4d35180f9069d3eeffab0e16d2bff29e8bbeda',
+      client_secret: '7f4d35180f9069d3eeffab0e16d2bff29e8bbeda'
     }
   })
-  gitment.render('git-comments')
-</script>
-
+  gitment.render('comments-gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+</div>
 
 
 
