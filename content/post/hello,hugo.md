@@ -6,6 +6,7 @@ categories = ["读书笔记"]
 toc = true
 author = "ElvisSong"
 author_homepage =  "https://elvissong.github.io/post/"
+gitment = true
 +++
 
 ### 你好，Hugo!

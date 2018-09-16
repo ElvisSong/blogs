@@ -40,6 +40,9 @@ pygmentsUseClasses = true
   [Params.GoogleAnalytics]
     ID = "UA-10147768-2"
 
+  [Params.Gitment]
+    ShortName = "elvis"
+
   [Params.Strings]
     Search = "搜索"
     PageNotFound = "你访问的页面不存在"
