@@ -1,73 +1,157 @@
-BaseURL = "https://elvissong.github.io/"
+baseURL = "https://elvissong.github.io/"
 LanguageCode = "zh-CN"
-HasCJKLanguage = true
-Title = "金窝银窝，不如狗窝"
-Theme = "hugo-pacman-theme"
+enableRobotsTXT = true
+enableEmoji = true
+title = "金窝银窝，不如狗窝"
+Theme = "jane"
+
 pygmentsStyle = "default"
-pygmentsUseClasses = true
+# Highlight options. See https://gohugo.io/content-management/syntax-highlighting/
+PygmentsCodeFences = true # Enable syntax highlighting with GitHub flavoured code fences
+PygmentsUseClasses = true # Use CSS classes to format highlighted code
+PygmentsCodefencesGuessSyntax = true
+PygmentsOptions = "linenos=table"
 
-[Author]
-  Name = "coderzh"
 
-[outputs]
-  home = [ "RSS", "HTML" ]
+hasCJKLanguage = true     # has chinese/japanese/korean ? # 自动检测是否包含 中文\日文\韩文
+paginate = 3                                              # 首页每页显示的文章数
+rssLimit = 20             # Limit Entry Count to Rss file # 限制 Rss 文章输出数量
+disqusShortname = ""      # disqus_shortname
+googleAnalytics = "UA-10147768-2"      # UA-XXXXXXXX-X
+copyright = ""            # default: author.name ↓        # 默认为下面配置的author.name ↓
+# uglyURLs = true         # more info: https://gohugo.io/content-management/urls/#ugly-urls
 
-[blackfriday]
-  angledQuotes = true
-  fractions = false
-  plainIDAnchors = true
-  extensions = ["hardLineBreak"]
+# language support # en / zh-cn / other... translations present in i18n/
+defaultContentLanguage = "zh-cn"           # Default language to use
+[languages.zh-cn]
+  languageCode = "zh-cn"
 
-[outputFormats] 
-  [outputFormats.RSS]
-    mediatype = "application/rss"
-    baseName = "feed"
+[author]                  # essential                     # 必需
+  name = "ElvisSong"
 
-[Params]
-  AuthorHomepage = "https://elvissong.github.com"
-  BottomIntroduce = "一个半路出家的测试程序员 <br/> 想要做点想做的东西"
-  Description = "Welcome to my blog! <br/> Hope you have fun here!"
-  Subtitle = ""
-  Weibo = "你看我头像是不是一条狗"
-  WeiboID = 2557765741
-  GitHub = "ElvisSong"
-  Imglogo = "img/logo.svg"
-  AuthorImg = "img/author.jpg"
-  DateFormat = "2006年01月02日"
-  MonthFormat = "2006年01月"
-  FancyBox = true
+[sitemap]                 # essential                     # 必需
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
 
-  [Params.GoogleAnalytics]
-    ID = "UA-10147768-2"
+[[menu.main]]             # config your menu              # 配置目录
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "Archives"
+  weight = 20
+  identifier = "archives"
+  url = "/post/"
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+[[menu.main]]
+  name = "Categories"
+  weight = 40
+  identifier = "categories"
+  url = "/categories/"
 
-  [Params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
+
+[params]
+  debug = false             # If true, load `eruda.min.js`. See https://github.com/liriliri/eruda
+  since = "2016"            # Site creation time          # 站点建立时间
+  homeFullContent = false   # if false, show post summaries on home page. Othewise show full content.
+  rssFullContent = true     # if false, Rss feed instead of the summary
+
+  # site info (optional)                                  # 站点信息（可选，不需要的可以直接注释掉）
+  logoTitle = "金窝银窝，不如狗窝"        # default: the title value    # 默认值: 上面设置的title值
+  keywords = ["Hugo", "theme","jane"]
+  description = "Hugo theme jane example site."
+
+  # paginate of archives, tags and categories             # 归档、标签、分类每页显示的文章数目，建议修改为一个较大的值
+  archive-paginate = 3
+
+  # paginate style, default use numbered pagination links
+  # if true, use original "Previous" and "Next" links.
+  # paginateOriginalStyle = true
+
+  # The date format to use; for a list of valid formats, see https://gohugo.io/functions/format/
+  dateFormatToUse = "2006-01-02"
+
+  # show word count and read time ?                       # 是否显示字数统计与阅读时间
+  moreMeta = true
+
+  # show language chooser in menu
+  showMenuLanguageChooser = true
+
+  # 一些全局开关，你也可以在每一篇内容的 front matter 中针对单篇内容关闭或开启某些功能，在 archetypes/default.md 查看更多信息。
+  # Some global options, you can also close or open something in front matter for a single post, see more information from `archetypes/default.md`.
+  toc = true                                                                            # 是否开启目录
+  photoswipe = true         # see https://github.com/dimsemenov/PhotoSwipe            # 是否启用PhotoSwipe（图片可点击）
+  bootcdn = false           # In china. @Deprecated: use [params.publicCDN]             # 是否使用bootcdn(@Deprecated: 请使用[params.publicCDN])
+  mathjax = false           # see https://www.mathjax.org/                              # 是否使用mathjax（数学公式）
+  contentCopyright = '<a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a>'
+
+  changyanAppid = ""        # Changyan app id             # 畅言
+  changyanAppkey = ""       # Changyan app key
+  tencent_analytics = ""    # Tencent Analytics
+  baidu_push = false        # baidu push                  # 百度
+  baidu_analytics = ""      # Baidu Analytics
+  baidu_verification = ""   # Baidu Verification
+  google_verification = ""  # Google_Verification         # 谷歌
+
+  # Link custom CSS and JS assets
+  #   (relative to /static/css and /static/js respectively)
+  customCSS = []            # if ['custom.css'], load '/static/css/custom.css' file
+  customJS = []             # if ['custom.js'], load '/static/js/custom.js' file
+
+  # enable 'fork me on github', see https://blog.github.com/2008-12-19-github-ribbons/
+  # forkMeOnGithub = "https://github.com/xianmin/hugo-theme-jane"
+
+  [params.publicCDN]        # load these files from public cdn                          # 启用公共CDN，需自行定义
+    enable = false
+    jquery = '<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>'
+    slideout = '<script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>'
+    gitmentJS = '<script src="https://cdn.jsdelivr.net/npm/gitment@0.0.3/dist/gitment.browser.min.js" crossorigin="anonymous"></script>'
+    gitmentCSS = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitment@0.0.3/style/default.min.css" crossorigin="anonymous">'
+
+  [params.utteranc]         # utteranc is a comment system based on GitHub issues. see https://utteranc.es
+    enable = false
+    repo = "xianmin/comments-for-hugo-theme-jane"    # The repo to store comments
+    issueTerm = "pathname"
+
+  [params.gitment]          # Gitment is a comment system based on GitHub issues. see https://github.com/imsun/gitment
     owner = "elvissong"              # Your GitHub ID
     repo = "blogs"               # The repo to store comments
     clientId = "5c7ee7bedb0995204f21"           # Your client ID
     clientSecret = "7f4d35180f9069d3eeffab0e16d2bff29e8bbeda"       # Your client secret
 
-  [Params.Strings]
-    Search = "搜索"
-    PageNotFound = "你访问的页面不存在"
-    ShowSideBar = "显示侧边栏"
-    HideSideBar = "隐藏侧边栏"
-    Categories = "分类"
-    Archive = "归档"
-    Tags = "标签"
-    TagCloud = "标签云"
-    Rss = "RSS 订阅"
-    TableOfContents = "文章目录"
+  [params.reward]                                         # 文章打赏
+    enable = false
+    wechat = "/path/to/your/wechat-qr-code.png"           # 微信二维码
+    alipay = "/path/to/your/alipay-qr-code.png"           # 支付宝二维码
 
-[Menu]
-  [[Menu.Main]]
-    Name = "首页"
-    URL = "/"
-    Weight = 1
-  [[Menu.Main]]
-    Name = "关于"
-    URL = "/about"
-    Weight = 3
-  [[Menu.Main]]
-    Name = "生活"
-    URL = "/life"
-    Weight = 2
+  [params.counter.busuanzi]  # a Chinese visitor counter  # 不蒜子计数器
+    enable = false
+
+  [params.counter.leancloud]  # Chinese leancloud visitor counter  # leancloud 计数器
+    enable = false
+    appId = ""
+    appKey = ""
+
+  [params.social]                                         # 社交链接
+    a-email = "mailto:lyggnsxw@sina.com"
+    # b-stack-overflow = "http://localhost:1313"
+    # c-twitter = "http://localhost:1313"
+    # d-facebook = "http://localhost:1313"
+    # e-linkedin = "http://localhost:1313"
+    # f-google = "http://localhost:1313"
+    g-github = "http://github.com/elvissong"
+    # h-weibo = "http://localhost:1313"
+    # i-zhihu = "http://localhost:1313"
+    # j-douban = "http://localhost:1313"
+    # k-pocket = "http://localhost:1313"
+    # l-tumblr = "http://localhost:1313"
+    # m-instagram = "http://localhost:1313"
+    # n-gitlab = "http://en.xianmin.org/hugo-theme-jane/"
+    # o-goodreads = "http://en.xianmin.org/hugo-theme-jane/"
+
